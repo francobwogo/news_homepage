@@ -138,6 +138,9 @@ div {
   width: 250px;
 }
 
+span.material-symbols-outlined {
+  font-size: 48px;
+}
 .menu {
   display: none;
   padding-left: 20px;
@@ -152,10 +155,6 @@ div {
 /* hambuger menu */
 #closeIcon {
   display: none;
-}
-
-#menuIcon {
-
 }
 
 .container {
