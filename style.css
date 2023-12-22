@@ -125,7 +125,7 @@ div {
 }
 
 .navMenu {
-  width: 250px;
+  width: 185px;
 }
 
 #navMenu {
@@ -136,7 +136,7 @@ div {
 .row {
   display: flex;
   justify-content: flex-end;
-  width: 250px;
+  width: 185px;
 }
 
 span.material-symbols-outlined {
@@ -148,7 +148,7 @@ span.material-symbols-outlined {
   padding-top: 100px;
   font-size: var(--fs-500);
   flex-direction: column;
-  width: 250px;
+  width: 185px;
   gap: 20px;
   height: 100vh;
 }
