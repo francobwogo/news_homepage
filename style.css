@@ -21,7 +21,7 @@
   --fs-600: 1.2rem;
   --fs-500: 1rem;
   --fs-400: 1rem;
-  --fs-300: .75rem;
+  --fs-300: .85rem;
 
   --fs-body: var(--fs-300);
 
@@ -111,12 +111,13 @@ div {
 
 .nav,
 .container {
-  width: 350px;
+  width: 280px;
 }
 
 .nav {
   display: flex;
 }
+
 
 .navbar {
   display: flex;
@@ -174,14 +175,34 @@ span.material-symbols-outlined {
 
 .cta {
   grid-area: cta;
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  padding: 20px 0;
 }
 
 .ctaImg {
   grid-area: ctaImg;
 }
 
+
 .more {
   grid-area: more;
+  padding-bottom: 20px;
+}
+
+.more-txt {
+  padding-bottom: 20px;
+}
+
+.btn-read {
+  background-color: var(--clr-primary-200);
+  border: none;
+  color: var(--clr-neutral-100);
+  height: 40px;
+  width: 150px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .new {
