@@ -1,0 +1,219 @@
+:root {
+  --clr-primary-100: hsl(35, 77%, 62%);
+  --clr-primary-200: hsl(5, 85%, 63%);
+
+  --clr-neutral-100: hsl(36, 100%, 99%);
+  --clr-neutral-200: hsl(233, 8%, 79%);
+  --clr-neutral-300: hsl(236, 13%, 42%);
+  --clr-neutral-400: hsl(240, 100%, 5%);
+
+  --ff-primary: 'Inter', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-bold: 800;
+  --fw-semi-bold: 700;
+  --fw-regular: 400;
+
+  --fs-800: 2rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1.2rem;
+  --fs-500: 1rem;
+  --fs-400: 1rem;
+  --fs-300: .75rem;
+
+  --fs-body: var(--fs-300);
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  background-color: var(--clr-neutral-100);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+div {
+  width: 100%;
+}
+
+.nav,
+.container {
+  width: 350px;
+}
+
+.nav {
+  display: flex;
+}
+
+.navMenu {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  background-color: var(--clr-neutral-100);
+}
+
+/* hambuger menu */
+label.hamburger {
+  display: block;
+  width: 40px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+input#hamburger {
+ display:none
+}
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  transition: 0.5s;
+}
+
+/* steps of 12 are optional, could also be 10, 13 etc */
+.line:nth-child(1) { top: 12px; }
+.line:nth-child(2) { top: 24px; }
+.line:nth-child(3) { top: 36px; }
+
+/* translateY must be same as */
+#hamburger:checked + .hamburger .line:nth-child(1){
+  transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburger:checked + .hamburger .line:nth-child(2){
+  opacity:0;
+}
+
+#hamburger:checked + .hamburger .line:nth-child(3){
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ctaImg"
+    "cta"
+    "more"
+    "new"
+    "articles";
+    height: 100vh;
+}
+
+.cta {
+  grid-area: cta;
+}
+
+.ctaImg {
+  grid-area: ctaImg;
+}
+
+.more {
+  grid-area: more;
+}
+
+.new {
+  grid-area: new;
+}
+
+.articles {
+  grid-area: articles;
+}
+
+.article-01,
+.article-02,
+.article-03 {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
