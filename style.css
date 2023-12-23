@@ -119,6 +119,10 @@ div {
   display: flex;
 }
 
+#nav {
+  padding-top: 10px;
+}
+
 
 .navbar {
   display: flex;
@@ -132,6 +136,11 @@ div {
 #navMenu {
   position: static;
   background-color: none;
+}
+
+.logo {
+  height: 40px;
+  width: 60px;
 }
 
 .row {
