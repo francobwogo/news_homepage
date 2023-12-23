@@ -152,6 +152,7 @@ div {
 span.material-symbols-outlined {
   font-size: 48px;
 }
+
 .menu {
   display: none;
   padding-left: 20px;
@@ -168,6 +169,7 @@ span.material-symbols-outlined {
   display: none;
 }
 
+/* https://grid.layoutit.com/ */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -180,7 +182,7 @@ span.material-symbols-outlined {
     "more"
     "new"
     "articles";
-    height: 100vh;
+  height: 100vh;
 }
 
 .cta {
@@ -284,3 +286,84 @@ span.material-symbols-outlined {
   height: 100px;
 }
 
+@media (min-width: 720px) and (max-width: 1050px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ctaImg ctaImg"
+      "cta more"
+      "articles new"
+      "articles new"
+      "articles new";
+  }
+
+  .container,
+  .nav {
+    width: 700px;
+  }
+
+  .ctaImg {
+    grid-area: ctaImg;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  .more {
+    grid-area: more;
+  }
+
+  .articles {
+    grid-area: articles;
+  }
+
+  .new {
+    grid-area: new;
+    height: 370px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ctaImg ctaImg new"
+      "cta more new"
+      "articles articles articles";
+  }
+
+  .container,
+  .nav {
+    width: 1050px;
+  }
+
+  .ctaImg {
+    grid-area: ctaImg;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  .more {
+    grid-area: more;
+  }
+
+  .articles {
+    grid-area: articles;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .new {
+    grid-area: new;
+  }
+
+}
