@@ -152,8 +152,15 @@ div {
   width: 185px;
 }
 
-span.material-symbols-outlined {
+/* span.material-symbols-outlined {
   font-size: 48px;
+} */
+
+.hamburger {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
 }
 
 .menu {
