@@ -220,6 +220,10 @@ span.material-symbols-outlined {
   letter-spacing: 2px;
 }
 
+.btn-read:hover {
+  background-color: var(--clr-neutral-400);
+}
+
 .new {
   grid-area: new;
   color: var(--clr-neutral-100);
@@ -295,8 +299,7 @@ span.material-symbols-outlined {
 }
 
 .article-img {
-  height: 100px;
-  width: 100px;
+  height: 90px;
 }
 
 @media (min-width: 720px) and (max-width: 1050px) {
@@ -313,6 +316,33 @@ span.material-symbols-outlined {
       "articles new";
   }
 
+  .row {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navMenu {
+    display: flex;
+    width: auto;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menuItem {
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-300);
+  }
+
   .container,
   .nav {
     width: 700px;
@@ -323,20 +353,26 @@ span.material-symbols-outlined {
   }
 
   .cta {
-    grid-area: cta;
+    font-size: var(--fs-900);
+    padding-right: 50px;
   }
 
   .more {
-    grid-area: more;
-  }
-
-  .articles {
-    grid-area: articles;
+    padding: 20px 0px;
   }
 
   .new {
-    grid-area: new;
-    height: 370px;
+    height: fit-content;
+  }
+
+  .articles {
+    height: fit-content;
+    gap: 16px;
+    padding-bottom: 15px;
+  }
+
+  .article-img {
+    height: 90px;
   }
 }
 
@@ -356,7 +392,7 @@ span.material-symbols-outlined {
   }
 
   .navbar {
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -365,24 +401,23 @@ span.material-symbols-outlined {
     width: auto;
   }
 
-  .menuItem {
-    font-size: var(--fs-200);
-    color: var(--clr-neutral-300);
-  }
-
   .menu {
     display: flex;
     flex-direction: row;
     height: auto;
-    padding-top: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menuItem {
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-300);
   }
 
   .container,
   .nav {
     width: 820px;
   }
-
-  .ctaImg {}
 
   #ctaImg {
     height: 180px;
@@ -404,13 +439,8 @@ span.material-symbols-outlined {
     vertical-align: middle;
   }
 
-  .btn-read:hover {
-    background-color: var(--clr-neutral-400);
-  }
-
   .more {
     padding: 20px 0px;
-
   }
 
   .articles {
@@ -418,7 +448,5 @@ span.material-symbols-outlined {
     flex-direction: row;
     gap: 10px;
   }
-
-  .new {}
 
 }
