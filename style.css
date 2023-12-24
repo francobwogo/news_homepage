@@ -341,7 +341,7 @@ div {
     flex-direction: row;
     height: auto;
     width: 100%;
-    padding: 0;
+    padding: 2px;
   }
 
   .menuItem {
