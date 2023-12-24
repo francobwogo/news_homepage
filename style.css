@@ -149,8 +149,6 @@ div {
 
 .row {
   display: flex;
-  justify-content: flex-end;
-  width: 185px;
 }
 
 /* span.material-symbols-outlined {
