@@ -117,6 +117,7 @@ div {
 .container {
   /* width: 270px; */
   width: 320;
+  padding: 0 5px;
 }
 
 .nav {
