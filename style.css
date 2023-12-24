@@ -115,7 +115,8 @@ div {
 
 .nav,
 .container {
-  width: 270px;
+  /* width: 270px; */
+  width: 350;
 }
 
 .nav {
@@ -206,7 +207,6 @@ div {
 .ctaImg {
   grid-area: ctaImg;
 }
-
 
 .more {
   grid-area: more;
